@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07507C2CC5C33E757D0C4795 /* Pods_RevelryTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F08C702FF63C2CD9946FFA9 /* Pods_RevelryTestTests.framework */; };
+		4C0A32365B86DB2324188527 /* Pods_RevelryTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC8869E2AB796869E11647 /* Pods_RevelryTest.framework */; };
+		BFBCD3C01D6C706800C6BF38 /* VCBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCD3BF1D6C706800C6BF38 /* VCBase.swift */; };
+		BFBCD3C41D6C738200C6BF38 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCD3C31D6C738200C6BF38 /* DataController.swift */; };
 		BFFB82EF1D6C659600461282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB82EE1D6C659600461282 /* AppDelegate.swift */; };
-		BFFB82F11D6C659600461282 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB82F01D6C659600461282 /* ViewController.swift */; };
+		BFFB82F11D6C659600461282 /* VCPending.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB82F01D6C659600461282 /* VCPending.swift */; };
 		BFFB82F41D6C659600461282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB82F21D6C659600461282 /* Main.storyboard */; };
 		BFFB82F61D6C659600461282 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFB82F51D6C659600461282 /* Assets.xcassets */; };
 		BFFB82F91D6C659600461282 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB82F71D6C659600461282 /* LaunchScreen.storyboard */; };
 		BFFB83041D6C659600461282 /* RevelryTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB83031D6C659600461282 /* RevelryTestTests.swift */; };
+		BFFB830F1D6C663400461282 /* RevelryAppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB830E1D6C663400461282 /* RevelryAppController.swift */; };
+		BFFB83111D6C6BAB00461282 /* VCDone.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB83101D6C6BAB00461282 /* VCDone.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +32,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		206BC7783EFA79BDA231F143 /* Pods-RevelryTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevelryTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevelryTestTests/Pods-RevelryTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		6642F30E6444D70D639B0D38 /* Pods-RevelryTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevelryTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RevelryTestTests/Pods-RevelryTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6CEC8869E2AB796869E11647 /* Pods_RevelryTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevelryTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F08C702FF63C2CD9946FFA9 /* Pods_RevelryTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevelryTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CA3C58E817ACE7AAD45C06B /* Pods-RevelryTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevelryTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RevelryTest/Pods-RevelryTest.debug.xcconfig"; sourceTree = "<group>"; };
+		B78CED1A7B810E40E4A9A616 /* Pods-RevelryTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevelryTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevelryTest/Pods-RevelryTest.release.xcconfig"; sourceTree = "<group>"; };
+		BFBCD3BF1D6C706800C6BF38 /* VCBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCBase.swift; sourceTree = "<group>"; };
+		BFBCD3C31D6C738200C6BF38 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BFFB82EB1D6C659600461282 /* RevelryTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevelryTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFB82EE1D6C659600461282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFFB82F01D6C659600461282 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFFB82F01D6C659600461282 /* VCPending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPending.swift; sourceTree = "<group>"; };
 		BFFB82F31D6C659600461282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFFB82F51D6C659600461282 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFFB82F81D6C659600461282 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +50,8 @@
 		BFFB82FF1D6C659600461282 /* RevelryTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RevelryTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFB83031D6C659600461282 /* RevelryTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevelryTestTests.swift; sourceTree = "<group>"; };
 		BFFB83051D6C659600461282 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFFB830E1D6C663400461282 /* RevelryAppController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RevelryAppController.swift; sourceTree = "<group>"; };
+		BFFB83101D6C6BAB00461282 /* VCDone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDone.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C0A32365B86DB2324188527 /* Pods_RevelryTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +67,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07507C2CC5C33E757D0C4795 /* Pods_RevelryTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34DBE28BAFA52B9709F33AB1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CA3C58E817ACE7AAD45C06B /* Pods-RevelryTest.debug.xcconfig */,
+				B78CED1A7B810E40E4A9A616 /* Pods-RevelryTest.release.xcconfig */,
+				6642F30E6444D70D639B0D38 /* Pods-RevelryTestTests.debug.xcconfig */,
+				206BC7783EFA79BDA231F143 /* Pods-RevelryTestTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A7807698D6DBD225BC04002D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6CEC8869E2AB796869E11647 /* Pods_RevelryTest.framework */,
+				6F08C702FF63C2CD9946FFA9 /* Pods_RevelryTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BFFB82E21D6C659600461282 = {
 			isa = PBXGroup;
 			children = (
 				BFFB82ED1D6C659600461282 /* RevelryTest */,
 				BFFB83021D6C659600461282 /* RevelryTestTests */,
 				BFFB82EC1D6C659600461282 /* Products */,
+				34DBE28BAFA52B9709F33AB1 /* Pods */,
+				A7807698D6DBD225BC04002D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +118,15 @@
 			isa = PBXGroup;
 			children = (
 				BFFB82EE1D6C659600461282 /* AppDelegate.swift */,
-				BFFB82F01D6C659600461282 /* ViewController.swift */,
+				BFFB82F01D6C659600461282 /* VCPending.swift */,
 				BFFB82F21D6C659600461282 /* Main.storyboard */,
 				BFFB82F51D6C659600461282 /* Assets.xcassets */,
 				BFFB82F71D6C659600461282 /* LaunchScreen.storyboard */,
 				BFFB82FA1D6C659600461282 /* Info.plist */,
+				BFFB830E1D6C663400461282 /* RevelryAppController.swift */,
+				BFFB83101D6C6BAB00461282 /* VCDone.swift */,
+				BFBCD3BF1D6C706800C6BF38 /* VCBase.swift */,
+				BFBCD3C31D6C738200C6BF38 /* DataController.swift */,
 			);
 			path = RevelryTest;
 			sourceTree = "<group>";
@@ -103,9 +147,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFFB83081D6C659600461282 /* Build configuration list for PBXNativeTarget "RevelryTest" */;
 			buildPhases = (
+				2573B3325611CEDFBA4E962C /* [CP] Check Pods Manifest.lock */,
 				BFFB82E71D6C659600461282 /* Sources */,
 				BFFB82E81D6C659600461282 /* Frameworks */,
 				BFFB82E91D6C659600461282 /* Resources */,
+				18F35D9D9C66981134107A3B /* [CP] Embed Pods Frameworks */,
+				C1A928F650D52086CDC4B431 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFFB830B1D6C659600461282 /* Build configuration list for PBXNativeTarget "RevelryTestTests" */;
 			buildPhases = (
+				D5B5DB01B31896F8463BCE23 /* [CP] Check Pods Manifest.lock */,
 				BFFB82FB1D6C659600461282 /* Sources */,
 				BFFB82FC1D6C659600461282 /* Frameworks */,
 				BFFB82FD1D6C659600461282 /* Resources */,
+				218EA0F1D1AA1AB49CC484F8 /* [CP] Embed Pods Frameworks */,
+				B4D8E3751F52854F79064919 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,12 +242,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18F35D9D9C66981134107A3B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RevelryTest/Pods-RevelryTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		218EA0F1D1AA1AB49CC484F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RevelryTestTests/Pods-RevelryTestTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2573B3325611CEDFBA4E962C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B4D8E3751F52854F79064919 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RevelryTestTests/Pods-RevelryTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1A928F650D52086CDC4B431 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RevelryTest/Pods-RevelryTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5B5DB01B31896F8463BCE23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BFFB82E71D6C659600461282 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFFB82F11D6C659600461282 /* ViewController.swift in Sources */,
+				BFFB830F1D6C663400461282 /* RevelryAppController.swift in Sources */,
+				BFBCD3C41D6C738200C6BF38 /* DataController.swift in Sources */,
+				BFFB82F11D6C659600461282 /* VCPending.swift in Sources */,
+				BFBCD3C01D6C706800C6BF38 /* VCBase.swift in Sources */,
+				BFFB83111D6C6BAB00461282 /* VCDone.swift in Sources */,
 				BFFB82EF1D6C659600461282 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +474,7 @@
 		};
 		BFFB83091D6C659600461282 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CA3C58E817ACE7AAD45C06B /* Pods-RevelryTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RevelryTest/Info.plist;
@@ -338,6 +486,7 @@
 		};
 		BFFB830A1D6C659600461282 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B78CED1A7B810E40E4A9A616 /* Pods-RevelryTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RevelryTest/Info.plist;
@@ -349,6 +498,7 @@
 		};
 		BFFB830C1D6C659600461282 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6642F30E6444D70D639B0D38 /* Pods-RevelryTestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RevelryTestTests/Info.plist;
@@ -361,6 +511,7 @@
 		};
 		BFFB830D1D6C659600461282 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 206BC7783EFA79BDA231F143 /* Pods-RevelryTestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = RevelryTestTests/Info.plist;
@@ -390,6 +541,7 @@
 				BFFB830A1D6C659600461282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFFB830B1D6C659600461282 /* Build configuration list for PBXNativeTarget "RevelryTestTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +550,7 @@
 				BFFB830D1D6C659600461282 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
