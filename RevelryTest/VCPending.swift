@@ -33,17 +33,17 @@ class VCPending: VCBase {
             
            
             if tf?.text?.characters.count  > 0 {
-                let stateObjEntity = StateDataEntity();
-                stateObjEntity.state = NSNumber(bool: false);
+                let stateObjEntity = StateRes();
+                stateObjEntity.state =  false;
                 
                 stateObjEntity.name = tf?.text!;
                 
                 let obj =  (self.fetchedResultsController.fetchedObjects?.last) as? StateDataEntity;
                 
                 if obj != nil {
-                    stateObjEntity.id = NSNumber(integer: obj!.id!.integerValue + 1)
+                    stateObjEntity.id = obj!.id!.integerValue + 1
                 } else {
-                    stateObjEntity.id = NSNumber(integer: 0);
+                    stateObjEntity.id = 0;
                 }
                 
                 CoreDataController.sharedInstance.addPendingStateObject([stateObjEntity]);
@@ -52,7 +52,7 @@ class VCPending: VCBase {
             
             
         }
-        let cancelAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Destructive) { (action) in
             self.dismissViewControllerAnimated(true, completion: nil);
          
             
@@ -66,6 +66,15 @@ class VCPending: VCBase {
         self.presentViewController(alertController, animated: true, completion: nil);
         
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        
+        
+        let obj = self.fetchedResultsController.objectAtIndexPath(indexPath) as! StateDataEntity;
+        obj.state = NSNumber(bool: true);
+    }
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

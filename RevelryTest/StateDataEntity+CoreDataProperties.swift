@@ -18,24 +18,7 @@ extension StateDataEntity {
     @NSManaged var name: String?
     @NSManaged var state: NSNumber?
     
-    convenience init(dictionary : NSDictionary) {
-        self.init();
-        self.id = dictionary["id"] as! Int;
-        self.state = dictionary["state"] as! Int;
-        self.name = dictionary["name"] as? String;
-    }
-    
-    class func arrayOfModelsFromDictionaries(arr:NSArray) -> [StateDataEntity]{
-        
-        var response:[StateDataEntity] = [];
-        for obj in arr {
-            let dict = obj as! NSDictionary;
-            response.append(StateDataEntity(dictionary: dict));
-            
-        }
-        
-        return response;
-    }
+   
 
 
 }

@@ -83,11 +83,11 @@ class VCBase: UIViewController,UITableViewDataSource,UITableViewDelegate,NSFetch
         var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier);
         let record = fetchedResultsController.objectAtIndexPath(indexPath) as! StateDataEntity;
         if cell == nil {
-            cell = UITableViewCell(style: .Default, reuseIdentifier: cellIdentifier);
+            cell = UITableViewCell(style: .Value1, reuseIdentifier: cellIdentifier);
         }
         
         cell?.textLabel?.text = record.name;
-       
+        cell?.detailTextLabel?.text = record.state?.boolValue == true ? "Done" : "Pending";
         return cell!;
         
         
@@ -108,6 +108,32 @@ class VCBase: UIViewController,UITableViewDataSource,UITableViewDelegate,NSFetch
         }
         
         return 0
+    }
+    
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
+        let trash = UITableViewRowAction(style: .Normal, title: "Trash") { action, index in
+            let obj  = self.fetchedResultsController.objectAtIndexPath(indexPath);
+            CoreDataController.sharedInstance.deleteObject(obj as! StateDataEntity);
+        }
+        trash.backgroundColor = UIColor.orangeColor();
+        
+        return [trash]
+    }
+    
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        // the cells you would like the actions to appear needs to be editable
+        
+        
+        
+        return true
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        // you need to implement this method too or you can't swipe to display the actions
+        
+        
+        
     }
     
 

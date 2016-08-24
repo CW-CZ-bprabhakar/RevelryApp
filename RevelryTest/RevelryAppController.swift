@@ -64,7 +64,7 @@ public class RevelryAppController: NSObject {
 
 public class Data : NSObject {
     
-    var data: [StateDataEntity]!
+    var data: [StateRes]!
     var statusCode : Int!
     
     
@@ -72,11 +72,36 @@ public class Data : NSObject {
         
         self.statusCode = statusCode;
         if statusCode == 200 {
-             self.data = StateDataEntity.arrayOfModelsFromDictionaries(dictionary!["data"] as! [NSDictionary] )
+             self.data = StateRes.arrayOfModelsFromDictionaries(dictionary!["data"] as! [NSDictionary] )
         }
       
     }
     
 }
 
+
+public class StateRes {
+    var id: Int!
+    var name: String!
+    var state: Bool!
+    
+    convenience init(dictionary : NSDictionary) {
+        self.init();
+        self.id = dictionary["id"] as! Int;
+        self.state = dictionary["state"] as! Bool;
+        self.name = dictionary["name"] as? String;
+    }
+    
+    class func arrayOfModelsFromDictionaries(arr:NSArray) -> [StateRes]{
+        
+        var response:[StateRes] = [];
+        for obj in arr {
+            let dict = obj as! NSDictionary;
+            response.append(StateRes(dictionary: dict));
+            
+        }
+        
+        return response;
+    }
+}
 

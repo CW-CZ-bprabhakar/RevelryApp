@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Aw-1q-9R6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9Aw-1q-9R6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -8,7 +8,7 @@
         <!--Done-->
         <scene sceneID="Dfs-QZ-a9G">
             <objects>
-                <viewController id="eF8-XN-hPu" customClass="VCDone" customModule="RevelryTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Done" id="eF8-XN-hPu" customClass="VCDone" customModule="RevelryTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gjn-di-PTk"/>
                         <viewControllerLayoutGuide type="bottom" id="2Zu-ZO-U8W"/>
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-WA-mat">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-WA-mat">
+                                <rect key="frame" x="0.0" y="4" width="600" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="eF8-XN-hPu" id="WrT-k5-3Cr"/>
@@ -27,8 +27,14 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bbb-WA-mat" firstAttribute="top" secondItem="gjn-di-PTk" secondAttribute="bottom" constant="-60" id="14q-oL-O4j"/>
+                            <constraint firstItem="bbb-WA-mat" firstAttribute="leading" secondItem="Mja-Ly-wRB" secondAttribute="leading" id="2Qm-H2-H6p"/>
+                            <constraint firstItem="2Zu-ZO-U8W" firstAttribute="top" secondItem="bbb-WA-mat" secondAttribute="bottom" id="UhI-fm-PNY"/>
+                            <constraint firstAttribute="trailing" secondItem="bbb-WA-mat" secondAttribute="trailing" id="mLO-3o-Hke"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="5Sc-90-Kfw"/>
+                    <navigationItem key="navigationItem" title="Done" id="5Sc-90-Kfw"/>
                     <connections>
                         <outlet property="tableView" destination="bbb-WA-mat" id="4Nt-b2-LlJ"/>
                     </connections>
@@ -49,8 +55,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PjV-XP-Xcy">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PjV-XP-Xcy">
+                                <rect key="frame" x="0.0" y="4" width="600" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="bsk-Z0-CeW" id="kQv-5Z-o5L"/>
@@ -59,8 +65,14 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PjV-XP-Xcy" firstAttribute="leading" secondItem="Rp1-5P-lub" secondAttribute="leading" id="7uu-2K-NDd"/>
+                            <constraint firstItem="wQn-3H-GTy" firstAttribute="top" secondItem="PjV-XP-Xcy" secondAttribute="bottom" id="JaP-dr-i53"/>
+                            <constraint firstItem="PjV-XP-Xcy" firstAttribute="top" secondItem="eJX-69-d0X" secondAttribute="bottom" constant="-60" id="OSM-xP-z5b"/>
+                            <constraint firstAttribute="trailing" secondItem="PjV-XP-Xcy" secondAttribute="trailing" id="Wru-9k-1vR"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="OIz-Tv-gaL">
+                    <navigationItem key="navigationItem" title="Pending" id="OIz-Tv-gaL">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="2q8-Zw-iLY">
                             <connections>
                                 <action selector="addTask:" destination="bsk-Z0-CeW" id="lBR-lj-jLD"/>
@@ -115,7 +127,7 @@
         <!--Done-->
         <scene sceneID="8GU-cI-73c">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QKI-RS-6U6" sceneMemberID="viewController">
+                <navigationController title="Done" automaticallyAdjustsScrollViewInsets="NO" id="QKI-RS-6U6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Done" id="1da-o0-FDh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kes-T4-OZE">

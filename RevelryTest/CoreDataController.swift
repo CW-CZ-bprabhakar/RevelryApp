@@ -53,14 +53,14 @@ public class CoreDataController: NSObject {
     }
     
     
-    func addPendingStateObject(stateArr : [StateDataEntity]) {
+    func addPendingStateObject(stateArr : [StateRes]) {
         // create an instance of our managedObjectContext
         let moc = self.managedObjectContext
         
         
         for stateObj in stateArr {
             // we set up our entity by selecting the entity and context that we're targeting
-            let entity = NSEntityDescription.insertNewObjectForEntityForName("State", inManagedObjectContext: moc) as! StateDataEntity
+            let entity = NSEntityDescription.insertNewObjectForEntityForName("StateDataEntity", inManagedObjectContext: moc) as! StateDataEntity
             
             // add our data
             entity.id = stateObj.id;
@@ -75,6 +75,19 @@ public class CoreDataController: NSObject {
         } catch {
             fatalError("Failure to save context: \(error)")
         }
+    }
+    
+    
+    func deleteObject(obj : StateDataEntity) {
+         let moc = self.managedObjectContext
+      moc.deleteObject(obj);
+       
+        do {
+            try moc.save()
+        } catch {
+            fatalError("Failure to save context: \(error)")
+        }
+
     }
     
     
