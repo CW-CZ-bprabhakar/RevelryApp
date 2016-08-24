@@ -11,6 +11,8 @@ import UIKit
 class VCPending: VCBase {
 
     override func viewDidLoad() {
+       
+        self.predicate = NSPredicate(format: "state = 0");
         super.viewDidLoad()
         
      
@@ -28,6 +30,25 @@ class VCPending: VCBase {
         let okAction = UIAlertAction(title: "Ok", style: .Default) { (action) in
             self.dismissViewControllerAnimated(true, completion: nil);
            let tf =  alertController.textFields?.first
+            
+           
+            if tf?.text?.characters.count  > 0 {
+                let stateObjEntity = StateDataEntity();
+                stateObjEntity.state = NSNumber(bool: false);
+                
+                stateObjEntity.name = tf?.text!;
+                
+                let obj =  (self.fetchedResultsController.fetchedObjects?.last) as? StateDataEntity;
+                
+                if obj != nil {
+                    stateObjEntity.id = NSNumber(integer: obj!.id!.integerValue + 1)
+                } else {
+                    stateObjEntity.id = NSNumber(integer: 0);
+                }
+                
+                CoreDataController.sharedInstance.addPendingStateObject([stateObjEntity]);
+                
+            }
             
             
         }

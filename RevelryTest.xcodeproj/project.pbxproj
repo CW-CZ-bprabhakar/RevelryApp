@@ -9,8 +9,12 @@
 /* Begin PBXBuildFile section */
 		07507C2CC5C33E757D0C4795 /* Pods_RevelryTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F08C702FF63C2CD9946FFA9 /* Pods_RevelryTestTests.framework */; };
 		4C0A32365B86DB2324188527 /* Pods_RevelryTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CEC8869E2AB796869E11647 /* Pods_RevelryTest.framework */; };
+		BF8664FC1D6DBA0D00392677 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8664FB1D6DBA0D00392677 /* CoreData.framework */; };
+		BF8665011D6DBB2600392677 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8665001D6DBB2600392677 /* CoreDataController.swift */; };
+		BF8665041D6DBB4E00392677 /* State.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF8665021D6DBB4E00392677 /* State.xcdatamodeld */; };
+		BF86650B1D6DBD0500392677 /* StateDataEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8665091D6DBD0500392677 /* StateDataEntity+CoreDataProperties.swift */; };
+		BF86650C1D6DBD0500392677 /* StateDataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF86650A1D6DBD0500392677 /* StateDataEntity.swift */; };
 		BFBCD3C01D6C706800C6BF38 /* VCBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCD3BF1D6C706800C6BF38 /* VCBase.swift */; };
-		BFBCD3C41D6C738200C6BF38 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBCD3C31D6C738200C6BF38 /* DataController.swift */; };
 		BFFB82EF1D6C659600461282 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB82EE1D6C659600461282 /* AppDelegate.swift */; };
 		BFFB82F11D6C659600461282 /* VCPending.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB82F01D6C659600461282 /* VCPending.swift */; };
 		BFFB82F41D6C659600461282 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB82F21D6C659600461282 /* Main.storyboard */; };
@@ -38,8 +42,12 @@
 		6F08C702FF63C2CD9946FFA9 /* Pods_RevelryTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RevelryTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CA3C58E817ACE7AAD45C06B /* Pods-RevelryTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevelryTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RevelryTest/Pods-RevelryTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B78CED1A7B810E40E4A9A616 /* Pods-RevelryTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RevelryTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-RevelryTest/Pods-RevelryTest.release.xcconfig"; sourceTree = "<group>"; };
+		BF8664FB1D6DBA0D00392677 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BF8665001D6DBB2600392677 /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		BF8665031D6DBB4E00392677 /* State.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = State.xcdatamodel; sourceTree = "<group>"; };
+		BF8665091D6DBD0500392677 /* StateDataEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StateDataEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BF86650A1D6DBD0500392677 /* StateDataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateDataEntity.swift; sourceTree = "<group>"; };
 		BFBCD3BF1D6C706800C6BF38 /* VCBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCBase.swift; sourceTree = "<group>"; };
-		BFBCD3C31D6C738200C6BF38 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		BFFB82EB1D6C659600461282 /* RevelryTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RevelryTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFB82EE1D6C659600461282 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFB82F01D6C659600461282 /* VCPending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPending.swift; sourceTree = "<group>"; };
@@ -59,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8664FC1D6DBA0D00392677 /* CoreData.framework in Frameworks */,
 				4C0A32365B86DB2324188527 /* Pods_RevelryTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +97,7 @@
 		A7807698D6DBD225BC04002D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF8664FB1D6DBA0D00392677 /* CoreData.framework */,
 				6CEC8869E2AB796869E11647 /* Pods_RevelryTest.framework */,
 				6F08C702FF63C2CD9946FFA9 /* Pods_RevelryTestTests.framework */,
 			);
@@ -117,6 +127,8 @@
 		BFFB82ED1D6C659600461282 /* RevelryTest */ = {
 			isa = PBXGroup;
 			children = (
+				BF8665091D6DBD0500392677 /* StateDataEntity+CoreDataProperties.swift */,
+				BF86650A1D6DBD0500392677 /* StateDataEntity.swift */,
 				BFFB82EE1D6C659600461282 /* AppDelegate.swift */,
 				BFFB82F01D6C659600461282 /* VCPending.swift */,
 				BFFB82F21D6C659600461282 /* Main.storyboard */,
@@ -126,7 +138,8 @@
 				BFFB830E1D6C663400461282 /* RevelryAppController.swift */,
 				BFFB83101D6C6BAB00461282 /* VCDone.swift */,
 				BFBCD3BF1D6C706800C6BF38 /* VCBase.swift */,
-				BFBCD3C31D6C738200C6BF38 /* DataController.swift */,
+				BF8665001D6DBB2600392677 /* CoreDataController.swift */,
+				BF8665021D6DBB4E00392677 /* State.xcdatamodeld */,
 			);
 			path = RevelryTest;
 			sourceTree = "<group>";
@@ -340,11 +353,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF86650B1D6DBD0500392677 /* StateDataEntity+CoreDataProperties.swift in Sources */,
 				BFFB830F1D6C663400461282 /* RevelryAppController.swift in Sources */,
-				BFBCD3C41D6C738200C6BF38 /* DataController.swift in Sources */,
 				BFFB82F11D6C659600461282 /* VCPending.swift in Sources */,
+				BF8665041D6DBB4E00392677 /* State.xcdatamodeld in Sources */,
+				BF8665011D6DBB2600392677 /* CoreDataController.swift in Sources */,
 				BFBCD3C01D6C706800C6BF38 /* VCBase.swift in Sources */,
 				BFFB83111D6C6BAB00461282 /* VCDone.swift in Sources */,
+				BF86650C1D6DBD0500392677 /* StateDataEntity.swift in Sources */,
 				BFFB82EF1D6C659600461282 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,6 +569,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BF8665021D6DBB4E00392677 /* State.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BF8665031D6DBB4E00392677 /* State.xcdatamodel */,
+			);
+			currentVersion = BF8665031D6DBB4E00392677 /* State.xcdatamodel */;
+			path = State.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BFFB82E31D6C659600461282 /* Project object */;
 }

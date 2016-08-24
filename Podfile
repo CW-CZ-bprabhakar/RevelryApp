@@ -5,6 +5,7 @@ target 'RevelryTest' do
 
   use_frameworks!
   pod 'Alamofire', '~> 3.4'
+  pod 'MBProgressHUD', '~> 1.0.0'
   # Pods for RevelryTest
 
   target 'RevelryTestTests' do

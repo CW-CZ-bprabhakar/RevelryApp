@@ -7,12 +7,18 @@
 //
 
 import UIKit
-
+import CoreData
 class VCDone: VCBase {
 
+  
+    
+    
     override func viewDidLoad() {
+       
+        self.predicate = NSPredicate(format: "state = 1");
+      
         super.viewDidLoad()
-
+        
       
     }
 
