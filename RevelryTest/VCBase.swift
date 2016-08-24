@@ -10,8 +10,9 @@ import UIKit
 import CoreData
 
 
-class VCBase: UIViewController,UITableViewDataSource,UITableViewDelegate,NSFetchedResultsControllerDelegate {
+class VCBase: UIViewController,UITableViewDataSource,UITableViewDelegate,NSFetchedResultsControllerDelegate,CellProtocol {
 
+    var cancelableObjects : [NSIndexPath] = []
     var managedObjectContext: NSManagedObjectContext = CoreDataController.sharedInstance.managedObjectContext;
     var tableArr:[String] = []
     var predicate : NSPredicate!
@@ -80,15 +81,13 @@ class VCBase: UIViewController,UITableViewDataSource,UITableViewDelegate,NSFetch
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "cellIdentifier";
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier);
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! TableViewCell;
         let record = fetchedResultsController.objectAtIndexPath(indexPath) as! StateDataEntity;
-        if cell == nil {
-            cell = UITableViewCell(style: .Value1, reuseIdentifier: cellIdentifier);
-        }
-        
-        cell?.textLabel?.text = record.name;
-        cell?.detailTextLabel?.text = record.state?.boolValue == true ? "Done" : "Pending";
-        return cell!;
+      
+        cell.delegate = self;
+        cell.titleLabel.text = record.name;
+        cell.cancelButton.hidden = !self.cancelableObjects.contains(indexPath);
+        return cell;
         
         
         
@@ -100,6 +99,15 @@ class VCBase: UIViewController,UITableViewDataSource,UITableViewDelegate,NSFetch
         }
         
         return 0
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.tableView.deselectRowAtIndexPath(indexPath, animated: false);
+         let obj  = self.fetchedResultsController.objectAtIndexPath(indexPath);
+        let cell = self.tableView.cellForRowAtIndexPath(indexPath) as! TableViewCell;
+        cell.changeState(obj as! StateDataEntity )
+        cell.cancelButton.hidden = false;
+        self.cancelableObjects.append(indexPath);
     }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let sections = fetchedResultsController.sections {
@@ -114,7 +122,9 @@ class VCBase: UIViewController,UITableViewDataSource,UITableViewDelegate,NSFetch
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]? {
         let trash = UITableViewRowAction(style: .Normal, title: "Trash") { action, index in
             let obj  = self.fetchedResultsController.objectAtIndexPath(indexPath);
+            
             CoreDataController.sharedInstance.deleteObject(obj as! StateDataEntity);
+           
         }
         trash.backgroundColor = UIColor.orangeColor();
         
@@ -136,5 +146,61 @@ class VCBase: UIViewController,UITableViewDataSource,UITableViewDelegate,NSFetch
         
     }
     
+    func cancelButtonTapped(cell : TableViewCell) {
+        
+        let indexPath = self.tableView.indexPathForCell(cell);
+        self.cancelableObjects.removeAtIndex(self.cancelableObjects.indexOf(indexPath!)!);
+    }
+    
 
+}
+
+protocol CellProtocol {
+    func cancelButtonTapped(cell : TableViewCell) ;
+}
+public class TableViewCell : UITableViewCell {
+    
+    @IBOutlet weak var titleLabel : UILabel!
+    
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    var timer : NSTimer!
+    var delegate : CellProtocol?
+    func changeState(obj : StateDataEntity ) {
+        self.timer  = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector:  #selector(TableViewCell.confirmChangeState(_:)), userInfo: ["StateDataEntity" : obj], repeats: false)
+    }
+    
+    @IBAction func cancelButtonClicked(sender : UIButton) {
+        self.timer.invalidate();
+        self.timer = nil;
+        self.cancelButton.hidden = true;
+        self.delegate?.cancelButtonTapped(self);
+    }
+    
+    func confirmChangeState(timer :  NSTimer)  {
+         self.delegate?.cancelButtonTapped(self);
+       let obj = timer.userInfo!["StateDataEntity"] as! StateDataEntity;
+        
+        obj.state = NSNumber(bool: !(obj.state?.boolValue)!);
+        try!CoreDataController.sharedInstance.managedObjectContext.save()
+        self.cancelButton.hidden = true;
+        
+
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        self.backgroundColor = UIColor.clearColor()
+        ;
+        self.tintColor = UIColor.clearColor();
+        self.contentView.backgroundColor = UIColor.clearColor()
+        self.cancelButton.backgroundColor = UIColor.orangeColor().colorWithAlphaComponent(0.8);
+        self.selectionStyle = .None
+       
+    }
+    public override func prepareForReuse() {
+        super.prepareForReuse()
+        self.cancelButton.hidden = true;
+    }
+    
 }

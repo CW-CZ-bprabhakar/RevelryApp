@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Done-->
@@ -20,6 +21,49 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-WA-mat">
                                 <rect key="frame" x="0.0" y="4" width="600" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="jUe-9W-sly" customClass="TableViewCell" customModule="RevelryTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jUe-9W-sly" id="eO9-Cc-V5H">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVe-4z-guH">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="43"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6B-74-DKG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                                    <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                                    <state key="normal" title="Cancel">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="cancelButtonClicked:" destination="jUe-9W-sly" eventType="touchUpInside" id="RLs-pf-axX"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="aVe-4z-guH" secondAttribute="trailing" constant="8" id="7UJ-he-yBQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="I6B-74-DKG" secondAttribute="trailing" id="OgH-b6-JX7"/>
+                                                <constraint firstAttribute="bottom" secondItem="I6B-74-DKG" secondAttribute="bottom" constant="0.5" id="Rhd-M0-fkf"/>
+                                                <constraint firstAttribute="bottom" secondItem="aVe-4z-guH" secondAttribute="bottom" constant="0.5" id="aAZ-zg-aeL"/>
+                                                <constraint firstItem="I6B-74-DKG" firstAttribute="leading" secondItem="eO9-Cc-V5H" secondAttribute="leading" id="ep1-iR-W4d"/>
+                                                <constraint firstItem="aVe-4z-guH" firstAttribute="leading" secondItem="eO9-Cc-V5H" secondAttribute="leadingMargin" id="gfq-eY-dXa"/>
+                                                <constraint firstItem="I6B-74-DKG" firstAttribute="top" secondItem="eO9-Cc-V5H" secondAttribute="top" id="hxn-1g-TGC"/>
+                                                <constraint firstItem="aVe-4z-guH" firstAttribute="top" secondItem="eO9-Cc-V5H" secondAttribute="top" id="t8k-6S-qeW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cancelButton" destination="I6B-74-DKG" id="Fiu-Tw-O6N"/>
+                                            <outlet property="titleLabel" destination="aVe-4z-guH" id="EsT-wz-9Eg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="eF8-XN-hPu" id="WrT-k5-3Cr"/>
                                     <outlet property="delegate" destination="eF8-XN-hPu" id="s4E-SO-myf"/>
@@ -58,6 +102,49 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PjV-XP-Xcy">
                                 <rect key="frame" x="0.0" y="4" width="600" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="TBN-R7-kj0" customClass="TableViewCell" customModule="RevelryTest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TBN-R7-kj0" id="zb6-vD-n3j">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VS-mG-BzD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                                    <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                                    <state key="normal" title="Cancel">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="cancelButtonClicked:" destination="TBN-R7-kj0" eventType="touchUpInside" id="6lL-mn-rwr"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYK-s9-eZd">
+                                                    <rect key="frame" x="8" y="0.0" width="584" height="43"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NYK-s9-eZd" firstAttribute="leading" secondItem="zb6-vD-n3j" secondAttribute="leadingMargin" id="8QP-iC-efa"/>
+                                                <constraint firstItem="9VS-mG-BzD" firstAttribute="leading" secondItem="zb6-vD-n3j" secondAttribute="leading" id="c5y-xy-Eld"/>
+                                                <constraint firstAttribute="bottom" secondItem="NYK-s9-eZd" secondAttribute="bottom" constant="0.5" id="je9-cy-3sX"/>
+                                                <constraint firstItem="9VS-mG-BzD" firstAttribute="top" secondItem="zb6-vD-n3j" secondAttribute="top" id="kHP-Oc-L8s"/>
+                                                <constraint firstAttribute="trailing" secondItem="NYK-s9-eZd" secondAttribute="trailing" constant="8" id="n64-LL-kCu"/>
+                                                <constraint firstAttribute="bottom" secondItem="9VS-mG-BzD" secondAttribute="bottom" constant="0.5" id="prO-jc-Jra"/>
+                                                <constraint firstAttribute="trailing" secondItem="9VS-mG-BzD" secondAttribute="trailing" id="xcb-5j-ntp"/>
+                                                <constraint firstItem="NYK-s9-eZd" firstAttribute="top" secondItem="zb6-vD-n3j" secondAttribute="top" id="xsc-wp-1Su"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cancelButton" destination="9VS-mG-BzD" id="q3F-pa-Wcf"/>
+                                            <outlet property="titleLabel" destination="NYK-s9-eZd" id="uyD-0N-Gsl"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="bsk-Z0-CeW" id="kQv-5Z-o5L"/>
                                     <outlet property="delegate" destination="bsk-Z0-CeW" id="yCb-yr-eeX"/>
@@ -109,7 +196,7 @@
         <scene sceneID="yQE-R2-lib">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NFr-pI-LsX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Pending" id="SSI-lb-M9h"/>
+                    <tabBarItem key="tabBarItem" title="Pending" image="categories" id="SSI-lb-M9h"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="C2g-Td-joi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -128,7 +215,7 @@
         <scene sceneID="8GU-cI-73c">
             <objects>
                 <navigationController title="Done" automaticallyAdjustsScrollViewInsets="NO" id="QKI-RS-6U6" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Done" id="1da-o0-FDh"/>
+                    <tabBarItem key="tabBarItem" title="Done" image="favorite" id="1da-o0-FDh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Kes-T4-OZE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -144,4 +231,8 @@
             <point key="canvasLocation" x="234" y="554"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="categories" width="24" height="24"/>
+        <image name="favorite" width="24" height="24"/>
+    </resources>
 </document>

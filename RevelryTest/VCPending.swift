@@ -67,14 +67,14 @@ class VCPending: VCBase {
         
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        
-        
-        let obj = self.fetchedResultsController.objectAtIndexPath(indexPath) as! StateDataEntity;
-        obj.state = NSNumber(bool: true);
-    }
-   
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        
+//        
+//        
+//        let obj = self.fetchedResultsController.objectAtIndexPath(indexPath) as! StateDataEntity;
+//        obj.state = NSNumber(bool: true);
+//    }
+//   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
